@@ -14,11 +14,24 @@ Bluefin is in the middle of a transition. This is an alpha release but is still 
 
 <DakotaSection />
 
+## Bluefin LTS {#lts}
+
+Bluefin LTS is built on CentOS Stream 10 for longer support windows, conservative upgrades, and production-focused workstations. It is published as bootc images from [projectbluefin/bluefin-lts](https://github.com/projectbluefin/bluefin-lts) in two variants, `bluefin-lts` and `bluefin-lts-nvidia`. The `stable` tag is promoted daily and each promotion is listed on the [releases page](https://github.com/projectbluefin/bluefin-lts/releases).
+
+```bash
+# LTS — recommended
+sudo bootc switch ghcr.io/projectbluefin/bluefin-lts:stable --enforce-container-sigpolicy
+# LTS — NVIDIA
+sudo bootc switch ghcr.io/projectbluefin/bluefin-lts-nvidia:stable --enforce-container-sigpolicy
+```
+
+Rebasing between the Bluefin (Fedora) and Bluefin LTS (CentOS) image families is not supported. Plan migrations as fresh installs or supported upgrade paths.
+
 ## Classic
 
-:::warning
+:::info
 
-These are no longer being updated and are kept here for historical reasons. 
+Bluefin Classic is the old traditional "Bluefin" built on Fedora Silverblue. It is maintained but is not receiving major feature updates.
 
 :::
 
